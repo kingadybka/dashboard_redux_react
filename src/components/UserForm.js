@@ -24,7 +24,7 @@ const UserForm = () => {
       fetchUser({ id })(dispatch);
     }
     return () => dispatch(clearUser());
-  }, []);
+  }, [dispatch, id, isCreate]);
 
   const handleSubmit = (values) => {
     if (isCreate) {
